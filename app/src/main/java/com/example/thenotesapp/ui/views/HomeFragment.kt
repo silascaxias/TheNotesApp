@@ -14,11 +14,10 @@ import androidx.core.view.MenuProvider
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.example.thenotesapp.MainActivity
 import com.example.thenotesapp.R
-import com.example.thenotesapp.adapter.NoteAdapter
 import com.example.thenotesapp.databinding.FragmentHomeBinding
-import com.example.thenotesapp.ui.viewmodel.NoteViewModel
+import com.example.thenotesapp.ui.adapter.NoteAdapter
+import com.example.thenotesapp.viewmodel.NoteViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextListener, MenuProvider {

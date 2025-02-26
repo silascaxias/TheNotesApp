@@ -2,7 +2,7 @@ package com.example.thenotesapp.di
 
 import com.example.thenotesapp.database.NoteDatabase
 import com.example.thenotesapp.repository.NoteRepository
-import com.example.thenotesapp.ui.viewmodel.NoteViewModel
+import com.example.thenotesapp.viewmodel.NoteViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModelOf
 import org.koin.core.module.dsl.factoryOf

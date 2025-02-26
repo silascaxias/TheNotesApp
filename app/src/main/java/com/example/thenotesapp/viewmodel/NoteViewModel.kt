@@ -1,4 +1,4 @@
-package com.example.thenotesapp.ui.viewmodel
+package com.example.thenotesapp.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

@@ -19,7 +19,7 @@ import com.example.thenotesapp.MainActivity
 import com.example.thenotesapp.R
 import com.example.thenotesapp.databinding.FragmentEditNoteBinding
 import com.example.thenotesapp.model.Note
-import com.example.thenotesapp.ui.viewmodel.NoteViewModel
+import com.example.thenotesapp.viewmodel.NoteViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class EditNoteFragment : Fragment(R.layout.fragment_edit_note), MenuProvider {

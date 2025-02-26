@@ -17,7 +17,7 @@ import com.example.thenotesapp.MainActivity
 import com.example.thenotesapp.R
 import com.example.thenotesapp.databinding.FragmentAddNoteBinding
 import com.example.thenotesapp.model.Note
-import com.example.thenotesapp.ui.viewmodel.NoteViewModel
+import com.example.thenotesapp.viewmodel.NoteViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AddNoteFragment : Fragment(R.layout.fragment_add_note), MenuProvider {
