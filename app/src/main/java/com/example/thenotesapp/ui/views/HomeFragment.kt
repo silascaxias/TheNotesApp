@@ -1,4 +1,4 @@
-package com.example.thenotesapp.fragments
+package com.example.thenotesapp.ui.views
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -18,21 +18,21 @@ import com.example.thenotesapp.MainActivity
 import com.example.thenotesapp.R
 import com.example.thenotesapp.adapter.NoteAdapter
 import com.example.thenotesapp.databinding.FragmentHomeBinding
-import com.example.thenotesapp.model.Note
-import com.example.thenotesapp.viewmodel.NoteViewModel
+import com.example.thenotesapp.ui.viewmodel.NoteViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextListener, MenuProvider {
 
     private var homeBinding: FragmentHomeBinding? = null
     private val binding get() = homeBinding!!
 
-    private lateinit var notesViewModel: NoteViewModel
+    private val notesViewModel: NoteViewModel by viewModel()
     private lateinit var noteAdapter: NoteAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         homeBinding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
@@ -44,7 +44,6 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
         val menuHost: MenuHost = requireActivity()
         menuHost.addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
 
-        notesViewModel = (activity as MainActivity).noteViewModel
         setUpRecyclerView()
 
         binding.addNoteFab.setOnClickListener {

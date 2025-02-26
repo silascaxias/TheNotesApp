@@ -54,12 +54,14 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    // KOIN
+    implementation(libs.insert.koin.koin.android)
     // ROOM
-    implementation (libs.androidx.room.runtime)
+    implementation(libs.androidx.room.runtime)
     ksp(libs.androidx.room.compiler)
     // Coroutines
     implementation(libs.kotlinx.coroutines.android)
-    implementation (libs.androidx.room.ktx)
+    implementation(libs.androidx.room.ktx)
     // Navigation
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)

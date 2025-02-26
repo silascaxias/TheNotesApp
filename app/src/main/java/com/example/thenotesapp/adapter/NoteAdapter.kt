@@ -6,9 +6,8 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.thenotesapp.R
 import com.example.thenotesapp.databinding.NoteLayoutBinding
-import com.example.thenotesapp.fragments.HomeFragmentDirections
+import com.example.thenotesapp.ui.views.HomeFragmentDirections
 import com.example.thenotesapp.model.Note
 
 class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {

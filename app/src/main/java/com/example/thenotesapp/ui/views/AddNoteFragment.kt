@@ -1,4 +1,4 @@
-package com.example.thenotesapp.fragments
+package com.example.thenotesapp.ui.views
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -17,14 +17,15 @@ import com.example.thenotesapp.MainActivity
 import com.example.thenotesapp.R
 import com.example.thenotesapp.databinding.FragmentAddNoteBinding
 import com.example.thenotesapp.model.Note
-import com.example.thenotesapp.viewmodel.NoteViewModel
+import com.example.thenotesapp.ui.viewmodel.NoteViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AddNoteFragment : Fragment(R.layout.fragment_add_note), MenuProvider {
 
     private var addNoteBinding: FragmentAddNoteBinding? = null
     private val binding get() = addNoteBinding!!
 
-    private lateinit var notesViewModel: NoteViewModel
+    private val notesViewModel: NoteViewModel by viewModel()
     private lateinit var addNoteView: View
 
     override fun onCreateView(
@@ -41,7 +42,6 @@ class AddNoteFragment : Fragment(R.layout.fragment_add_note), MenuProvider {
         val menuHost: MenuHost = requireActivity()
         menuHost.addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
 
-        notesViewModel = (activity as MainActivity).noteViewModel
         addNoteView = view
     }
 
